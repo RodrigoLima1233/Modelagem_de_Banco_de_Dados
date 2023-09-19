@@ -19,5 +19,29 @@ alter table carro add cor varchar(15) not null after modelo;
 
 alter table carro drop cor;
 
+ insert into carro values ( 101, 'VW', 'Gol', 'ABC1234' );
+
+ insert into carro values ( 102, 'Ford', 'Ka', 'ABC1236' );
+
+  insert into carro values ( null, 'FIAT', 'Marea Turbo', 'ABC1235' );
+
+ insert into carro values ( null, 'Toyota', 'Corolla', 'ABC1237' );
+
+ insert into carro values ( null, 'honda', 'Civic', 'ABC1238' );
+
+update carro set nome_modelo = 'Ka Sedan' where idVeiculo = 102;
+
+update carro set nome_modelo = 'VW Volkswagen' where idVeiculo = 101;
+
+update carro set nome_modelo = 'Polo', placa='ABC1240' where idVeiculo = 101;
+
+
+delete from carro where  idVeiculo = 103;
+
+ select * from carro where placa = 'abc1238';
+
+select fabricante, nome_modelo, placa from carro where placa = 'ABC1238';
+
+
 
 
