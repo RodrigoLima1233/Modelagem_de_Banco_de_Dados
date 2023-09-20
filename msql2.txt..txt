@@ -30,7 +30,7 @@ insert into aluno ( nome, cpf, responsavel ) values ( 'Waldiney Mouse', '123.456
 insert into aluno ( cpf, matricula, nome, responsavel, email ) values ( '123.456.789-07', null, 'Genivaldo Williams', 'Clotilde Williams', 'gw@email.com' );
 
 
- insert into turma values ( 2023080, 'M', 'Tecnico de Informática' );
+ insert into turma values ( 2023080, 'M', 'Tecnico de Informática' )
 
  desc estuda;
 
@@ -78,6 +78,91 @@ insert into leciona values ( null, 23, 1903 );
  select * from leciona;
 
  desc leciona;
+
+insert into disciplinas values ( null, 'Lógica de Programação' );
+
+ select * from disciplinas;
+
+insert into professor values ( null, 'Jefferson Brandão', 'T.I.' );
+
+select * from disciplinas;
+
+select * from professor;
+
+insert into possui values ( null, 24, 2023080 );
+
+select * from possui;
+
+ update professor set nome = 'Vicente Silva Vicente Orsino' where matricula = 1902;
+
+select * from professor;
+
+update professor set nome = 'Vicente Orsino' where matricula = 1902;
+
+ select * from professor;
+
+select * from aluno;
+
+update aluno set nascimento = '1990-02-08' where matricula = 3007;
+
+select * from aluno;
+
+
+update aluno set nascimento = '1994-10-02' where matricula = 3008;
+
+update aluno set nascimento = '1990-02-08' where matricula = 3008;
+
+select * from aluno;
+
+alter table professor add email varchar(80) after nome;
+
+ select * from professor;
+
+
+update professor set email = 'sergio@email.com' where matricula = 1901;
+
+select * from professor; 
+
+update professor set email = 'vicentecom' where matricula = 1902;
+update professor set email = 'sergio@email.com' where matricula = 1903;
+update professor set email = 'flavia@email.com' where matricula = 1903;
+update professor set email = 'jeff@email.com' where matricula = 1904;
+
+
+select * from professor;
+
+
+
+insert into possui values ( null, 23, 2023100 );
+
+
+
+
+insert into turma values ( 2023100, 'M', 'Técnico de Comunicação Visual' );
+
+select * from turma;
+
+
+ insert into aluno ( nome, cpf, responsavel ) values ( 'Judite Presley', '123.456.789-08', 'Elvis Presley' );
+
+ select * from aluno;
+
+update aluno set nascimento = '1994-04-10' where matricula = 3010;
+
+
+ select * from disciplinas;
+
+update disciplinas set nome = 'Programação Python' where cod_disciplina = 21;
+
+select * from disciplinas;
+
+
+
+
+
+
+
+
 
 
 
