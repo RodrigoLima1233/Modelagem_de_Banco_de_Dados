@@ -156,14 +156,20 @@ update disciplinas set nome = 'Programação Python' where cod_disciplina = 21;
 
 select * from disciplinas;
 
+ insert into aluno values ( null, 'Renata Mouse', '1995-03-15', '123.456.789-09', 'Wesley Keyboard', 'rm@email.com' );
+
+
+select * from aluno order by nome; 
 
 
 
+ update aluno set nome = 'Renata Mouse Silva' where matricula = 3009;
 
 
+ insert into aluno values ( null, 'Mouse Sherman Williams', '2015-09-12', '123.456.789-10', 'Cpu Sherman', null );
 
 
+ select aluno.nome, turma.definicao, turma.turno from aluno, turma, estuda where aluno.matricula = estuda.fk_aluno_matricula and fk_turma_numero = turma.numero;
 
 
-
-
+ select aluno.nome, disciplinas.nome from aluno, estuda, turma, possui, disciplinas where aluno.matricula = estuda.fk_aluno_matricula and estuda.fk_turma_numero = turma.numero and turma.numero = possui.fk_turma_numero and possui.fk_disciplinas.cod_disciplina;
